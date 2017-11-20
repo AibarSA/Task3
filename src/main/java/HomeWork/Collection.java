@@ -8,17 +8,12 @@ public class Collection {
 
     public static void main(String[] args) {
 
-        Set<String> strings = new TreeSet<String>(new Comparator<String>() {
-            public int compare(String s1, String s2) {
-                return s1.compareTo(s2);
-            }
-        });
+        Set<String> strings = new TreeSet<String>(new ReverseComparator());
 
         for (int i = 0; i <args.length ; i++) {
             strings.add(args[i]);
         }
-
-
+        
         System.out.println(strings);
 
     }
